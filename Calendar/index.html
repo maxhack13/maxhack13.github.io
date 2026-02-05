@@ -52,7 +52,8 @@
                         </div>
                         <div class="mb-3">
                             <label for="event_modality" class="form-label">Modality*</label>
-                            <select class="form-select" id="event_modality" required onchange="updateLocationOptions(this.value)">
+                            <select class="form-select" id="event_modality" required
+                                onchange="updateLocationOptions(this.value)">
                                 <option value="--">--</option>
                                 <option value="in-person">In-Person</option>
                                 <option value="remote">Remote</option>
@@ -60,7 +61,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="event_location" class="form-label">Location/label>
-                            <input type="text" class="form-control" id="event_location">
+                                <input type="text" class="form-control" id="event_location">
                         </div>
                         <div class="mb-3">
                             <label for="event_remote_url" class="form-label">Remote URL*</label>
@@ -75,7 +76,8 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeModal()">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        onclick="closeModal()">Close</button>
                     <button type="button" class="btn btn-primary" onclick="saveEvent()">Save changes</button>
                 </div>
             </div>
@@ -92,7 +94,7 @@
                     Event</button>
             </div>
             <div class="custom-container">
-                <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="../index.html">Back to Home</button>
+                <a href="../index.html" class="btn btn-primary mt-3">Back to Home</a>
             </div>
         </div>
         <div class="col">
