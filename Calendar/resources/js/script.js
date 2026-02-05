@@ -43,9 +43,22 @@ function saveEvent() {
     let eventCategory = document.getElementById("event_category").value;
     let eventWeekday = document.getElementById("event_weekday").value;
     let eventTime = document.getElementById("event_time").value;
+    let eventModality = document.getElementById("event_modality").value;
     let eventLocation = document.getElementById("event_location").value;
     let eventRemoteUrl = document.getElementById("event_remote_url").value;
     let eventAttendees = document.getElementById("event_attendees").value;
+
+    // Basic validation
+    if (!eventName || !eventWeekday || !eventTime || eventModality === "--") {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+    // URL validation for remote events
+    if (!eventRemoteUrl.startsWith("http://") && !eventRemoteUrl.startsWith("https://")) {
+        alert("Please enter a valid URL.");
+        return;
+    }
 
     if (editingEvent) {
         // Update existing event
