@@ -55,7 +55,7 @@ function saveEvent() {
     }
 
     // URL validation for remote events
-    if (!eventRemoteUrl.startsWith("http://") && !eventRemoteUrl.startsWith("https://")) {
+    if (eventModality === "remote" && !eventRemoteUrl.startsWith("http://") && !eventRemoteUrl.startsWith("https://")) {
         alert("Please enter a valid URL.");
         return;
     }
