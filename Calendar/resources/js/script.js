@@ -44,8 +44,8 @@ function saveEvent() {
     let eventWeekday = document.getElementById("event_weekday").value;
     let eventTime = document.getElementById("event_time").value;
     let eventModality = document.getElementById("event_modality").value;
-    let eventLocation = document.getElementById("event_location").value;
-    let eventRemoteUrl = document.getElementById("event_remote_url").value;
+    let eventLocation = eventModality === "in-person" ? document.getElementById("event_location").value : ""; //ternary(?) operator, basically an if/else statement and : seperates the if from the else.
+    let eventRemoteUrl = eventModality === "remote" ? document.getElementById("event_remote_url").value : "";
     let eventAttendees = document.getElementById("event_attendees").value;
 
     // Basic validation
